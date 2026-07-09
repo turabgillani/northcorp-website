@@ -10,7 +10,9 @@ export default function ClosingCTA() {
   return (
     <section id="contact" className="bg-brand text-light-on-green">
       <div className="max-w-[1120px] mx-auto px-8 py-[82px] text-center">
-        <Logo size={34} fill="#BC6A46" />
+        <div className="flex justify-center">
+          <Logo size={34} fill="#BC6A46" />
+        </div>
         <Reveal className="mt-6 mb-[18px]">
           <h2 className="font-serif font-normal text-[46px] leading-[1.08] tracking-[-.015em] text-paper mx-auto max-w-[640px]">
             Stop answering the phone yourself.

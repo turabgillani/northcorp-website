@@ -37,7 +37,10 @@ export default function RootLayout({
       lang="en"
       className={`${newsreader.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      {/* suppressHydrationWarning: browser extensions (ClickUp, Grammarly, etc.)
+          inject attributes into <body> before React hydrates; that's an
+          extension artifact, not an app bug, so it shouldn't warn in the console. */}
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
