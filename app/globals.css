@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* Backgrounds */
+  --color-paper: #F4F1E9;
+  --color-altband: #EEE7D8;
+  --color-panel: #FBF6EC;
+  --color-panel-alt: #FBF7EE;
+  --color-card: #FCFAF3;
+  --color-card2: #FFFDF8;
+
+  /* Brand */
+  --color-brand: #14392B;
+  --color-brand-dark: #0F2B20;
+  --color-terracotta: #BC6A46;
+  --color-terracotta-dark: #A9542F;
+  --color-on-terracotta: #1B140F;
+
+  /* Accents */
+  --color-mint: #7FD6A0;
+  --color-mint-light: #BEE0CF;
+  --color-mint-light-2: #D3E6DA;
+  --color-muted-green: #8FA396;
+  --color-rec: #E5484D;
+  --color-serif-index: #D8C4AC;
+
+  /* Text */
+  --color-ink: #1B2620;
+  --color-body: #3C4A42;
+  --color-muted: #5C7062;
+  --color-mono-warm: #8a6a52;
+  --color-mono-warm-2: #9a8f7e;
+  --color-light-on-green: #EDECE4;
+
+  /* Fonts */
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+@keyframes nc-eq {
+  0%, 100% { transform: scaleY(.24); }
+  50% { transform: scaleY(1); }
+}
+@keyframes nc-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .3; transform: scale(.72); }
+}
+@keyframes nc-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-terracotta);
+  color: #F8F5EE;
+}
+
+.eq-bar {
+  transform-origin: bottom;
+  animation: nc-eq 950ms ease-in-out infinite;
+}
+
+.pulse-dot {
+  animation: nc-pulse 2.4s ease-in-out infinite;
+}
+
+.pulse-dot-fast {
+  animation: nc-pulse 1.4s ease-in-out infinite;
+}
+
+.fade-in {
+  animation: nc-fade .25s ease-out;
+}
+
+.reveal-init {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
