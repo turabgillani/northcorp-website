@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#eae7df;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .dv-turn{padding:44px 48px 40px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+  .dv-thd{display:flex;align-items:baseline;gap:12px;margin:0 0 6px}
+  .dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+  .dv-tname{font:700 14px/1.2 'Hanken Grotesk',sans-serif;color:#1a1a1a}
+  .dv-intro{margin:0 0 26px;max-width:640px;font:400 13px/1.55 'Hanken Grotesk',sans-serif;color:rgba(0,0,0,.55)}
+  .dv-opts{display:flex;flex-wrap:wrap;gap:34px;align-items:flex-start}
+  .dv-opt{flex:none;display:flex;flex-direction:column;gap:12px;scroll-margin-top:16px}
+  .dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.09);color:#1a1a1a;border-radius:5px;text-decoration:none}
+  .dv-olabel{display:flex;align-items:center;gap:9px;font:600 12px/1.3 'Hanken Grotesk',sans-serif;color:rgba(0,0,0,.7)}
+  .dv-card{width:500px;max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.08);overflow:hidden}
+  .dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+  .dv-next{margin:26px 0 0;font:13px/1.6 'Hanken Grotesk',sans-serif;color:rgba(0,0,0,.5)}
+  @keyframes nc-eq{0%,100%{transform:scaleY(.28)}50%{transform:scaleY(1)}}
+  @keyframes nc-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.72)}}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t2">
+  <div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">A high-tech edge on <a class="dv-oid" href="#1a">1a</a> (same evergreen, serif &amp; paper)</span></div>
+  <p class="dv-intro">Two ways to signal "technology company" without touching what you liked about <a class="dv-oid" href="#1a">1a</a>. Both add a monospace technical layer (kickers, coordinates, compliance read like instrument readouts) and refine the mark into a precision reticle: the north star sits inside a machined ring with registration ticks. <a class="dv-oid" href="#2a">2a</a> keeps it whisper-quiet; <a class="dv-oid" href="#2b">2b</a> adds one live "on a call" moment so the product feels real.</p>
+  <div class="dv-opts">
+
+    <!-- ============ OPTION 2A — MERIDIAN / INSTRUMENT (subtle) ============ -->
+    <div class="dv-opt" id="2a">
+      <div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Instrument &nbsp;·&nbsp; whisper-quiet tech layer</div>
+      <div class="dv-card">
+        <div style="position:relative;background:#F4F1E9;padding:26px 28px 24px;color:#1B2620;overflow:hidden">
+          <!-- corner registration marks -->
+          <svg width="34" height="34" viewBox="0 0 34 34" style="position:absolute;top:14px;right:14px;opacity:.5"><path d="M34 0 L22 0 M34 0 L34 12" stroke="#BC6A46" stroke-width="1.3" fill="none"></path><circle cx="30" cy="4" r="1.4" fill="#BC6A46"></circle></svg>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="#14392B" stroke-width="1.5"></circle><path d="M24 2 L24 6 M46 24 L42 24 M24 46 L24 42 M2 24 L6 24" stroke="#BC6A46" stroke-width="1.5"></path><polygon points="24,10 28,20 38,24 28,28 24,38 20,28 10,24 20,20" fill="#14392B"></polygon></svg>
+              <span style="font:700 15px/1 'Hanken Grotesk',sans-serif;letter-spacing:-.01em;color:#14392B">Northcorp<span style="font-weight:500;color:#5C7062"> AI</span></span>
+            </div>
+            <div style="display:flex;gap:16px;font:500 10.5px/1 'Hanken Grotesk',sans-serif;color:#5C7062">Services<span>About</span><span>Contact</span></div>
+          </div>
+          <div style="height:1px;background:linear-gradient(90deg,rgba(20,57,43,.18),rgba(20,57,43,.05));margin-bottom:30px;position:relative">
+            <span style="position:absolute;left:0;top:-3px;width:1px;height:7px;background:rgba(20,57,43,.25)"></span>
+            <span style="position:absolute;left:33%;top:-3px;width:1px;height:7px;background:rgba(20,57,43,.18)"></span>
+            <span style="position:absolute;left:66%;top:-3px;width:1px;height:7px;background:rgba(20,57,43,.18)"></span>
+            <span style="position:absolute;right:0;top:-3px;width:1px;height:7px;background:rgba(20,57,43,.25)"></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:15px">
+            <span style="width:6px;height:6px;border-radius:50%;background:#BC6A46;animation:nc-pulse 2.4s ease-in-out infinite"></span>
+            <span style="font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8a6a52">Agent live · AI voice receptionists</span>
+          </div>
+          <div style="font:400 33px/1.08 'Newsreader',serif;letter-spacing:-.01em;color:#14392B;margin-bottom:14px">The firm that answers<br>your phones.</div>
+          <div style="font:400 12.5px/1.5 'Hanken Grotesk',sans-serif;color:#3C4A42;max-width:340px;margin-bottom:22px">We design, test, and run AI voice agents for private dental, chiropractic, and medical practices. You hire a firm, not an app.</div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
+            <div style="background:#14392B;color:#F4F1E9;font:600 11.5px/1 'Hanken Grotesk',sans-serif;padding:11px 18px;border-radius:7px">Book a consultation</div>
+            <div style="font:500 11.5px/1 'Hanken Grotesk',sans-serif;color:#14392B;text-decoration:underline;text-underline-offset:3px">How it works</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:15px;border-top:1px solid rgba(20,57,43,.14);font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#5C7062">
+            <span style="color:#14392B">HIPAA ✓</span><span style="opacity:.4">/</span><span style="color:#14392B">BAA ✓</span><span style="opacity:.4">/</span><span style="color:#14392B">CPPA ✓</span><span style="opacity:.4">/</span><span>3-STAGE PIPELINE</span>
+          </div>
+        </div>
+        <div style="padding:16px 24px;background:#fff;font:400 11px/1.55 'Hanken Grotesk',sans-serif;color:#666;border-top:1px solid rgba(0,0,0,.07)"><span style="font:600 9px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#BC6A46">Added</span>&nbsp; monospace kicker &amp; compliance readout · pulsing live-agent dot · reticle mark (star in a machined ring) · registration ticks. Nothing else about <a class="dv-oid" href="#1a" style="color:#14392B">1a</a> changes.</div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 2B — MERIDIAN / SIGNAL (one live moment) ============ -->
+    <div class="dv-opt" id="2b">
+      <div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Signal &nbsp;·&nbsp; one live "on a call" moment</div>
+      <div class="dv-card">
+        <div style="position:relative;background:#F4F1E9;padding:26px 28px 24px;color:#1B2620;overflow:hidden">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:28px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="#14392B" stroke-width="1.5"></circle><path d="M24 2 L24 6 M46 24 L42 24 M24 46 L24 42 M2 24 L6 24" stroke="#BC6A46" stroke-width="1.5"></path><polygon points="24,10 28,20 38,24 28,28 24,38 20,28 10,24 20,20" fill="#14392B"></polygon></svg>
+              <span style="font:700 15px/1 'Hanken Grotesk',sans-serif;letter-spacing:-.01em;color:#14392B">Northcorp<span style="font-weight:500;color:#5C7062"> AI</span></span>
+            </div>
+            <div style="display:flex;gap:16px;font:500 10.5px/1 'Hanken Grotesk',sans-serif;color:#5C7062">Services<span>About</span><span>Contact</span></div>
+          </div>
+          <div style="font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8a6a52;margin-bottom:14px">AI voice receptionists</div>
+          <div style="font:400 32px/1.08 'Newsreader',serif;letter-spacing:-.01em;color:#14392B;margin-bottom:14px">The firm that answers<br>your phones.</div>
+          <div style="font:400 12.5px/1.5 'Hanken Grotesk',sans-serif;color:#3C4A42;max-width:320px;margin-bottom:18px">We design, test, and run AI voice agents for private dental, chiropractic, and medical practices.</div>
+
+          <!-- live call panel -->
+          <div style="background:#14392B;border-radius:10px;padding:13px 15px;margin-bottom:20px;max-width:320px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:11px">
+              <span style="display:flex;align-items:center;gap:7px;font:500 9px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#BEE0CF"><span style="width:6px;height:6px;border-radius:50%;background:#7FD6A0;animation:nc-pulse 2s ease-in-out infinite"></span>On a call</span>
+              <span style="font:500 9px/1 'JetBrains Mono',monospace;color:#8FA396">00:07</span>
+            </div>
+            <div style="display:flex;align-items:flex-end;gap:3px;height:26px">
+              <span style="width:3px;height:100%;background:#BC6A46;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite"></span>
+              <span style="width:3px;height:100%;background:#BC6A46;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite .12s"></span>
+              <span style="width:3px;height:100%;background:#7FD6A0;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite .24s"></span>
+              <span style="width:3px;height:100%;background:#BC6A46;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite .36s"></span>
+              <span style="width:3px;height:100%;background:#8FA396;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite .48s"></span>
+              <span style="width:3px;height:100%;background:#BC6A46;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite .6s"></span>
+              <span style="width:3px;height:100%;background:#7FD6A0;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite .72s"></span>
+              <span style="width:3px;height:100%;background:#8FA396;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite .84s"></span>
+              <span style="width:3px;height:100%;background:#BC6A46;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite .96s"></span>
+              <span style="width:3px;height:100%;background:#8FA396;border-radius:2px;transform-origin:bottom;animation:nc-eq 900ms ease-in-out infinite 1.08s"></span>
+              <span style="flex:1"></span>
+              <span style="font:500 8.5px/1.4 'JetBrains Mono',monospace;color:#BEE0CF;text-align:right">Routing<br>to human</span>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
+            <div style="background:#14392B;color:#F4F1E9;font:600 11.5px/1 'Hanken Grotesk',sans-serif;padding:11px 18px;border-radius:7px">Book a consultation</div>
+            <div style="font:500 11.5px/1 'Hanken Grotesk',sans-serif;color:#14392B;text-decoration:underline;text-underline-offset:3px">How it works</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:15px;border-top:1px solid rgba(20,57,43,.14);font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.04em;color:#5C7062">
+            <span style="color:#14392B">HIPAA ✓</span><span style="opacity:.4">/</span><span style="color:#14392B">BAA ✓</span><span style="opacity:.4">/</span><span style="color:#14392B">CPPA ✓</span>
+          </div>
+        </div>
+        <div style="padding:16px 24px;background:#fff;font:400 11px/1.55 'Hanken Grotesk',sans-serif;color:#666;border-top:1px solid rgba(0,0,0,.07)"><span style="font:600 9px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#BC6A46">Added</span>&nbsp; everything in <a class="dv-oid" href="#2a" style="color:#14392B">2a</a>, plus one live "on a call" panel with an audio waveform, showing the agent actually working (and routing clinical questions to a human).</div>
+      </div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "build the Home page from <a class="dv-oid" href="#2a">2a</a>" · "<a class="dv-oid" href="#2b">2b</a> but the call panel in paper, not dark" · "somewhere between <a class="dv-oid" href="#2a">2a</a> and <a class="dv-oid" href="#2b">2b</a>"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+  <div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Three brand directions for Northcorp AI</span></div>
+  <p class="dv-intro">Each board shows the logo, the color palette, the type pairing, and a hero applied in-brand so you can judge the feel. They deliberately pull in different directions (light/dark, serif/grotesque, evergreen/amber/teal) so we can lock one before building the full site. Pick a whole direction, or mix parts (say something like "1a's palette with 1b's logo").</p>
+  <div class="dv-opts">
+
+    <!-- ============ OPTION 1A — MERIDIAN ============ -->
+    <div class="dv-opt" id="1a">
+      <div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Meridian &nbsp;·&nbsp; editorial evergreen, light</div>
+      <div class="dv-card">
+
+        <!-- hero preview -->
+        <div style="background:#F4F1E9;padding:26px 28px 24px;color:#1B2620">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:38px">
+            <div style="display:flex;align-items:center;gap:9px">
+              <svg width="21" height="21" viewBox="0 0 48 48" fill="none"><polygon points="24,3 29,19 45,24 29,29 24,45 19,29 3,24 19,19" fill="#14392B"></polygon></svg>
+              <span style="font:700 15px/1 'Hanken Grotesk',sans-serif;letter-spacing:-.01em;color:#14392B">Northcorp<span style="font-weight:500;color:#5C7062"> AI</span></span>
+            </div>
+            <div style="display:flex;gap:16px;font:500 10.5px/1 'Hanken Grotesk',sans-serif;color:#5C7062">Services<span>About</span><span>Contact</span></div>
+          </div>
+          <div style="font:600 10px/1 'Hanken Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#BC6A46;margin-bottom:14px">AI voice receptionists</div>
+          <div style="font:400 33px/1.08 'Newsreader',serif;letter-spacing:-.01em;color:#14392B;margin-bottom:14px">The firm that answers<br>your phones.</div>
+          <div style="font:400 12.5px/1.5 'Hanken Grotesk',sans-serif;color:#3C4A42;max-width:340px;margin-bottom:22px">We design, test, and run AI voice agents for private dental, chiropractic, and medical practices. You hire a firm, not an app.</div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
+            <div style="background:#14392B;color:#F4F1E9;font:600 11.5px/1 'Hanken Grotesk',sans-serif;padding:11px 18px;border-radius:7px">Book a consultation</div>
+            <div style="font:500 11.5px/1 'Hanken Grotesk',sans-serif;color:#14392B;text-decoration:underline;text-underline-offset:3px">How it works</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(20,57,43,.14)">
+            <span style="font:600 9.5px/1 'Hanken Grotesk',sans-serif;color:#14392B;background:rgba(20,57,43,.07);padding:6px 9px;border-radius:5px">HIPAA compliant</span>
+            <span style="font:600 9.5px/1 'Hanken Grotesk',sans-serif;color:#14392B;background:rgba(20,57,43,.07);padding:6px 9px;border-radius:5px">BAA with every client</span>
+            <span style="font:600 9.5px/1 'Hanken Grotesk',sans-serif;color:#14392B;background:rgba(20,57,43,.07);padding:6px 9px;border-radius:5px">California CPPA</span>
+          </div>
+        </div>
+
+        <!-- spec sheet -->
+        <div style="padding:22px 24px 24px">
+          <!-- logo -->
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Logo · north star mark</div>
+          <div style="display:flex;align-items:center;gap:22px;margin-bottom:24px;padding:16px;background:#F4F1E9;border-radius:8px">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none"><polygon points="24,3 29,19 45,24 29,29 24,45 19,29 3,24 19,19" fill="#14392B"></polygon></svg>
+            <div style="width:1px;height:34px;background:rgba(20,57,43,.15)"></div>
+            <svg width="30" height="30" viewBox="0 0 48 48" fill="none"><polygon points="24,3 29,19 45,24 29,29 24,45 19,29 3,24 19,19" fill="none" stroke="#14392B" stroke-width="3"></polygon></svg>
+            <div style="font:700 18px/1 'Hanken Grotesk',sans-serif;color:#14392B;letter-spacing:-.01em">Northcorp<span style="font-weight:500;color:#8FA396"> AI</span></div>
+          </div>
+          <!-- palette -->
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Palette</div>
+          <div style="display:flex;gap:8px;margin-bottom:24px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#14392B"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#14392B</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Forest</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#BC6A46"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#BC6A46</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Clay</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#8FA396"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#8FA396</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Sage</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#F4F1E9;border:1px solid rgba(0,0,0,.1)"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#F4F1E9</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Paper</div></div>
+          </div>
+          <!-- type -->
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Type</div>
+          <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:6px"><span style="font:400 44px/1 'Newsreader',serif;color:#14392B">Aa</span><div><div style="font:600 12px/1.2 'Hanken Grotesk',sans-serif;color:#333">Newsreader</div><div style="font:400 10.5px/1.2 'Hanken Grotesk',sans-serif;color:#999">Headlines · serif, editorial</div></div></div>
+          <div style="display:flex;align-items:baseline;gap:16px"><span style="font:700 30px/1 'Hanken Grotesk',sans-serif;color:#14392B">Aa</span><div><div style="font:600 12px/1.2 'Hanken Grotesk',sans-serif;color:#333">Hanken Grotesk</div><div style="font:400 10.5px/1.2 'Hanken Grotesk',sans-serif;color:#999">Body & UI · clean grotesque</div></div></div>
+
+          <div style="margin-top:20px;padding-top:18px;border-top:1px solid rgba(0,0,0,.08);font:400 11.5px/1.55 'Hanken Grotesk',sans-serif;color:#666">Reads like a consulting firm you retain, not a product you configure. Serif on warm paper signals trust and permanence; clay keeps it human. Evergreen sidesteps healthcare blue.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 1B — SIGNAL ============ -->
+    <div class="dv-opt" id="1b">
+      <div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Signal &nbsp;·&nbsp; near-black, technical restraint</div>
+      <div class="dv-card">
+
+        <div style="background:#0C0D0F;padding:26px 28px 24px;color:#ECE9E2">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:38px">
+            <div style="display:flex;align-items:center;gap:9px">
+              <svg width="20" height="20" viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="7" height="32" fill="#ECE9E2"></rect><rect x="35" y="8" width="7" height="32" fill="#ECE9E2"></rect><polygon points="6,8 13,8 42,40 35,40" fill="#E68A4E"></polygon></svg>
+              <span style="font:600 12.5px/1 'JetBrains Mono',monospace;letter-spacing:.02em;color:#ECE9E2">NORTHCORP AI</span>
+            </div>
+            <div style="display:flex;gap:16px;font:500 10px/1 'JetBrains Mono',monospace;color:#7B818A">Services<span>About</span><span>Contact</span></div>
+          </div>
+          <div style="font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.1em;color:#E68A4E;margin-bottom:15px">// VOICE AGENTS FOR PRACTICES</div>
+          <div style="font:800 34px/1.04 'Archivo',sans-serif;letter-spacing:-.02em;color:#ECE9E2;margin-bottom:14px">Your front desk,<br>always on.</div>
+          <div style="font:400 12.5px/1.5 'Hanken Grotesk',sans-serif;color:#A7ADB4;max-width:340px;margin-bottom:22px">AI voice agents that answer, qualify, and book. Every clinical question is handed to a human. No advice, no diagnosis, no exceptions.</div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
+            <div style="background:#E68A4E;color:#0C0D0F;font:700 11.5px/1 'Hanken Grotesk',sans-serif;padding:11px 18px;border-radius:7px">Book a consultation</div>
+            <div style="font:500 11.5px/1 'JetBrains Mono',monospace;color:#ECE9E2">how it works →</div>
+          </div>
+          <div style="display:flex;gap:18px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(236,233,226,.12)">
+            <span style="font:500 9.5px/1 'JetBrains Mono',monospace;color:#7B818A">HIPAA</span>
+            <span style="font:500 9.5px/1 'JetBrains Mono',monospace;color:#7B818A">BAA</span>
+            <span style="font:500 9.5px/1 'JetBrains Mono',monospace;color:#7B818A">CPPA</span>
+            <span style="font:500 9.5px/1 'JetBrains Mono',monospace;color:#7B818A">3-STAGE PIPELINE</span>
+          </div>
+        </div>
+
+        <div style="padding:22px 24px 24px">
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Logo · geometric N monogram</div>
+          <div style="display:flex;align-items:center;gap:22px;margin-bottom:24px;padding:16px;background:#0C0D0F;border-radius:8px">
+            <svg width="40" height="40" viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="7" height="32" fill="#ECE9E2"></rect><rect x="35" y="8" width="7" height="32" fill="#ECE9E2"></rect><polygon points="6,8 13,8 42,40 35,40" fill="#E68A4E"></polygon></svg>
+            <div style="width:1px;height:34px;background:rgba(236,233,226,.16)"></div>
+            <div style="font:600 15px/1 'JetBrains Mono',monospace;color:#ECE9E2;letter-spacing:.02em">NORTHCORP AI</div>
+          </div>
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Palette</div>
+          <div style="display:flex;gap:8px;margin-bottom:24px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#0C0D0F"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#0C0D0F</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Base</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#16181C"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#16181C</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Surface</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#E68A4E"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#E68A4E</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Amber</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#ECE9E2;border:1px solid rgba(0,0,0,.1)"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#ECE9E2</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Bone</div></div>
+          </div>
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Type</div>
+          <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:6px"><span style="font:800 42px/1 'Archivo',sans-serif;color:#0C0D0F;letter-spacing:-.02em">Aa</span><div><div style="font:600 12px/1.2 'Hanken Grotesk',sans-serif;color:#333">Archivo</div><div style="font:400 10.5px/1.2 'Hanken Grotesk',sans-serif;color:#999">Headlines · tight grotesque</div></div></div>
+          <div style="display:flex;align-items:baseline;gap:16px"><span style="font:500 26px/1 'JetBrains Mono',monospace;color:#E68A4E">Aa</span><div><div style="font:600 12px/1.2 'Hanken Grotesk',sans-serif;color:#333">JetBrains Mono</div><div style="font:400 10.5px/1.2 'Hanken Grotesk',sans-serif;color:#999">Labels & data · monospace</div></div></div>
+
+          <div style="margin-top:20px;padding-top:18px;border-top:1px solid rgba(0,0,0,.08);font:400 11.5px/1.55 'Hanken Grotesk',sans-serif;color:#666">Near-black restraint in the spirit of Vapi and Linear. Amber is the one signal color: no healthcare blue, no gradients, no glow. Mono labels make the compliance and pipeline claims read like engineering, not marketing.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ OPTION 1C — FREQUENCY ============ -->
+    <div class="dv-opt" id="1c">
+      <div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Frequency &nbsp;·&nbsp; humanist teal, warm &amp; calm</div>
+      <div class="dv-card">
+
+        <div style="background:#EEF1F0;padding:26px 28px 24px;color:#16211F">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:38px">
+            <div style="display:flex;align-items:center;gap:9px">
+              <svg width="22" height="22" viewBox="0 0 48 48" fill="none"><rect x="5" y="17" width="5" height="14" rx="2.5" fill="#1F4E49"></rect><rect x="14" y="11" width="5" height="26" rx="2.5" fill="#1F4E49"></rect><rect x="23" y="4" width="5" height="40" rx="2.5" fill="#E1906E"></rect><rect x="32" y="11" width="5" height="26" rx="2.5" fill="#1F4E49"></rect><rect x="41" y="17" width="5" height="14" rx="2.5" fill="#1F4E49"></rect></svg>
+              <span style="font:700 15px/1 'Bricolage Grotesque',sans-serif;letter-spacing:-.01em;color:#1F4E49">Northcorp<span style="font-weight:500;color:#6E8481"> AI</span></span>
+            </div>
+            <div style="display:flex;gap:16px;font:500 10.5px/1 'Hanken Grotesk',sans-serif;color:#6E8481">Services<span>About</span><span>Contact</span></div>
+          </div>
+          <div style="font:600 10px/1 'Hanken Grotesk',sans-serif;letter-spacing:.1em;color:#E1906E;margin-bottom:14px">Dental · Chiropractic · Medical</div>
+          <div style="font:700 33px/1.06 'Bricolage Grotesque',sans-serif;letter-spacing:-.02em;color:#1F4E49;margin-bottom:14px">A calmer front desk<br>for your practice.</div>
+          <div style="font:400 12.5px/1.5 'Hanken Grotesk',sans-serif;color:#3E4E4B;max-width:340px;margin-bottom:22px">We build and run the AI voice receptionist, so your team can focus on the patient in the room instead of the phone on the wall.</div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
+            <div style="background:#1F4E49;color:#EEF1F0;font:600 11.5px/1 'Hanken Grotesk',sans-serif;padding:11px 18px;border-radius:24px">Talk to us</div>
+            <div style="font:500 11.5px/1 'Hanken Grotesk',sans-serif;color:#1F4E49;text-decoration:underline;text-underline-offset:3px">See how it works</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(31,78,73,.14)">
+            <span style="font:600 9.5px/1 'Hanken Grotesk',sans-serif;color:#1F4E49;background:#fff;padding:6px 9px;border-radius:20px">HIPAA compliant</span>
+            <span style="font:600 9.5px/1 'Hanken Grotesk',sans-serif;color:#1F4E49;background:#fff;padding:6px 9px;border-radius:20px">BAA available</span>
+            <span style="font:600 9.5px/1 'Hanken Grotesk',sans-serif;color:#1F4E49;background:#fff;padding:6px 9px;border-radius:20px">California CPPA</span>
+          </div>
+        </div>
+
+        <div style="padding:22px 24px 24px">
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Logo · abstracted waveform</div>
+          <div style="display:flex;align-items:center;gap:22px;margin-bottom:24px;padding:16px;background:#EEF1F0;border-radius:8px">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none"><rect x="5" y="17" width="5" height="14" rx="2.5" fill="#1F4E49"></rect><rect x="14" y="11" width="5" height="26" rx="2.5" fill="#1F4E49"></rect><rect x="23" y="4" width="5" height="40" rx="2.5" fill="#E1906E"></rect><rect x="32" y="11" width="5" height="26" rx="2.5" fill="#1F4E49"></rect><rect x="41" y="17" width="5" height="14" rx="2.5" fill="#1F4E49"></rect></svg>
+            <div style="width:1px;height:34px;background:rgba(31,78,73,.15)"></div>
+            <div style="font:700 18px/1 'Bricolage Grotesque',sans-serif;color:#1F4E49;letter-spacing:-.01em">Northcorp<span style="font-weight:500;color:#6E8481"> AI</span></div>
+          </div>
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Palette</div>
+          <div style="display:flex;gap:8px;margin-bottom:24px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#1F4E49"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#1F4E49</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Teal</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#E1906E"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#E1906E</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Coral</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#6E8481"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#6E8481</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Slate</div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:46px;border-radius:6px;background:#EEF1F0;border:1px solid rgba(0,0,0,.1)"></div><div style="font:600 9px/1 'JetBrains Mono',monospace;color:#444">#EEF1F0</div><div style="font:500 9px/1 'Hanken Grotesk',sans-serif;color:#999">Mist</div></div>
+          </div>
+          <div style="font:600 9px/1 'Hanken Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a958a;margin-bottom:12px">Type</div>
+          <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:6px"><span style="font:700 44px/1 'Bricolage Grotesque',sans-serif;color:#1F4E49;letter-spacing:-.02em">Aa</span><div><div style="font:600 12px/1.2 'Hanken Grotesk',sans-serif;color:#333">Bricolage Grotesque</div><div style="font:400 10.5px/1.2 'Hanken Grotesk',sans-serif;color:#999">Headlines · warm, distinctive</div></div></div>
+          <div style="display:flex;align-items:baseline;gap:16px"><span style="font:600 30px/1 'Hanken Grotesk',sans-serif;color:#1F4E49">Aa</span><div><div style="font:600 12px/1.2 'Hanken Grotesk',sans-serif;color:#333">Hanken Grotesk</div><div style="font:400 10.5px/1.2 'Hanken Grotesk',sans-serif;color:#999">Body & UI · humanist</div></div></div>
+
+          <div style="margin-top:20px;padding-top:18px;border-top:1px solid rgba(0,0,0,.08);font:400 11.5px/1.55 'Hanken Grotesk',sans-serif;color:#666">Warm and human, in the spirit of Abridge. Muted teal is medical-adjacent without the clichéd blue; the abstracted waveform nods to voice; coral and rounded forms keep it calm and reassuring for a non-technical owner.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="dv-next">Try next: "build the Home page from <a class="dv-oid" href="#1b">1b</a>" · "<a class="dv-oid" href="#1a">1a</a> palette with <a class="dv-oid" href="#1c">1c</a>'s waveform mark" · "show a dark version of <a class="dv-oid" href="#1c">1c</a>" · "new directions"</p>
+</section>
+</x-dc>
+</body>
+</html>
