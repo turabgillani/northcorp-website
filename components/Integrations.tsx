@@ -57,11 +57,8 @@ export default function Integrations() {
     <section id="integrations" className="max-w-[1120px] mx-auto px-8 pt-19 pb-15">
       <Reveal className="grid grid-cols-1 min-[901px]:grid-cols-[.9fr_1.1fr] gap-9 min-[901px]:gap-14 items-end mb-10">
         <div>
-          <div className="font-mono font-medium text-[11px] leading-none tracking-[.16em] uppercase text-terracotta mb-[18px]">
-            Integrations
-          </div>
           <h2 className="font-serif font-normal text-[38px] leading-[1.12] tracking-[-.015em] text-brand">
-            Every call ends up in the systems you already run.
+            Every call ends up in the systems you <span className="italic text-terracotta">already run</span>.
           </h2>
         </div>
         <p className="font-sans text-[16px] leading-[1.65] text-body max-w-[460px]">
@@ -97,7 +94,7 @@ export default function Integrations() {
             key={cat.title}
             className={`rounded-[15px] p-7 transition-all duration-300 ease-[cubic-bezier(.22,.61,.36,1)] hover:-translate-y-1 ${
               cat.dark
-                ? "bg-brand border border-brand shadow-[0_16px_34px_-24px_rgba(20,57,43,.55)] hover:shadow-[0_26px_52px_-22px_rgba(20,57,43,.7)]"
+                ? "nc-chapter border border-brand shadow-[0_16px_34px_-24px_rgba(20,57,43,.55)] hover:shadow-[0_26px_52px_-22px_rgba(20,57,43,.7)]"
                 : "bg-card border border-brand/[.1] shadow-[0_1px_0_rgba(20,57,43,.03),0_16px_34px_-26px_rgba(20,57,43,.35)] hover:shadow-[0_1px_0_rgba(20,57,43,.03),0_26px_46px_-26px_rgba(20,57,43,.5)]"
             }`}
           >

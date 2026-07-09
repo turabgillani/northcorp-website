@@ -27,14 +27,14 @@ const ROWS = [
 
 export default function ComplianceBand() {
   return (
-    <section className="bg-brand text-light-on-green">
+    <section className="nc-chapter text-light-on-green">
       <div className="max-w-[1120px] mx-auto px-8 py-[66px] grid grid-cols-1 min-[901px]:grid-cols-[.82fr_1fr] gap-8 min-[901px]:gap-16 items-start">
-        <div className="sticky-compliance min-[901px]:sticky min-[901px]:top-24 max-[900px]:static">
+        <div className="min-[901px]:sticky min-[901px]:top-24 max-[900px]:static">
           <div className="font-mono font-medium text-[11px] leading-none tracking-[.16em] uppercase text-mint mb-[18px]">
             Compliance
           </div>
           <h2 className="font-serif font-normal text-[36px] leading-[1.16] text-paper mb-[22px] tracking-[-.01em]">
-            We treat compliance as the product, not the footer.
+            We treat compliance as the <span className="italic text-mint">product</span>, not the footer.
           </h2>
           <p className="font-sans text-[15px] leading-[1.6] text-mint-light mb-[30px] max-w-[340px]">
             Every safeguard is standing before your agent answers its first call. Nothing

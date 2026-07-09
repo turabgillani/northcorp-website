@@ -15,12 +15,15 @@ import ClosingCTA from "./ClosingCTA";
 import Footer from "./Footer";
 import CallDemoModal from "./CallDemoModal";
 import BookingFormModal from "./BookingFormModal";
+import ScrollLine from "./ScrollLine";
 
 function HomeContent() {
   const { callDemo, bookingForm } = useSite();
 
   return (
     <div className="min-h-screen">
+      <span className="nc-grain" aria-hidden="true" />
+      <ScrollLine />
       <Header />
       <Hero />
       <ComplianceBand />

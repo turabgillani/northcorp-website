@@ -38,7 +38,8 @@ export default function Pitch() {
             The case for it
           </div>
           <h2 className="font-serif font-normal text-[44px] leading-[1.08] tracking-[-.02em] text-brand mb-[18px]">
-            Every call you miss is a patient choosing someone else.
+            Every call you miss is a patient choosing{" "}
+            <span className="italic text-terracotta">someone else</span>.
           </h2>
           <p className="font-sans text-[17px] leading-[1.6] text-body max-w-[560px]">
             Your phone is the first thing a new patient meets. Today it&apos;s a coin
@@ -63,7 +64,7 @@ export default function Pitch() {
             </ul>
           </div>
 
-          <div className="bg-brand rounded-[18px] p-9 text-light-on-green shadow-[0_30px_70px_-34px_rgba(20,57,43,.65)] relative">
+          <div className="nc-chapter rounded-[18px] p-9 text-light-on-green shadow-[0_30px_70px_-34px_rgba(20,57,43,.65)] relative">
             <div className="flex items-center gap-[11px] mb-6">
               <span className="pulse-dot w-2 h-2 rounded-full bg-mint" />
               <span className="font-mono font-semibold text-[10.5px] leading-none tracking-[.12em] uppercase text-mint">

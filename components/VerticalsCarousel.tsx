@@ -86,7 +86,7 @@ export default function VerticalsCarousel() {
         Who we build for
       </div>
       <h2 className="font-serif font-normal text-[40px] leading-[1.1] tracking-[-.01em] text-brand mb-3 max-w-[640px]">
-        Built for three kinds of practice.
+        Built for <span className="italic text-terracotta">three</span> kinds of practice.
       </h2>
       <p className="font-sans text-[16px] leading-[1.6] text-body max-w-[560px] mb-3">
         Independently owned practices with one to five locations. The kind of place where
@@ -157,7 +157,7 @@ export default function VerticalsCarousel() {
               </button>
             </div>
 
-            <div className="bg-brand rounded-2xl px-[22px] pt-[22px] pb-2.5 shadow-[0_26px_60px_-28px_rgba(20,57,43,.6)]">
+            <div className="nc-chapter rounded-2xl px-[22px] pt-[22px] pb-2.5 shadow-[0_26px_60px_-28px_rgba(20,57,43,.6)]">
               <div className="flex items-center justify-between mb-4">
                 <span className="flex items-center gap-2 font-mono font-medium text-[10px] leading-none tracking-[.12em] uppercase text-mint-light">
                   <span className="pulse-dot-fast w-[7px] h-[7px] rounded-full bg-rec" />

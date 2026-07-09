@@ -153,9 +153,10 @@ export default function BookingFormModal({ bookingForm }: { bookingForm: Booking
               <div className="flex items-center gap-[18px] flex-wrap mt-0.5">
                 <button
                   type="submit"
-                  className="cursor-pointer border-none bg-brand text-paper font-sans font-semibold text-[14.5px] leading-none px-[26px] py-[15px] rounded-[9px] transition-all duration-200 hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(20,57,43,.5)]"
+                  disabled={bookingForm.submitting}
+                  className="cursor-pointer border-none bg-brand text-paper font-sans font-semibold text-[14.5px] leading-none px-[26px] py-[15px] rounded-[9px] transition-all duration-200 hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(20,57,43,.5)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
                 >
-                  Request a consultation
+                  {bookingForm.submitting ? "Sending…" : "Request a consultation"}
                 </button>
                 <span className="flex-1 min-w-[180px] flex items-center gap-2 font-sans text-[11.5px] leading-[1.4] text-[#8a7d6c]">
                   <svg width="14" height="14" viewBox="0 0 32 32" fill="none" className="flex-none">

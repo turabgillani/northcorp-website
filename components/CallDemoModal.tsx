@@ -10,7 +10,9 @@ const TABS: { key: ScenarioKey; label: string }[] = [
   { key: "medical", label: "Medical" },
 ];
 
-const WAVE_COLORS = ["#BC6A46", "#7FD6A0", "#8FA396", "#BC6A46", "#7FD6A0", "#BC6A46", "#8FA396", "#7FD6A0"];
+// Idle colours for the scripted fallback; the audio analyser overrides heights
+// directly when a real recording is playing.
+const WAVE_COLORS = ["#7FD6A0", "#BEE0CF", "#BC6A46", "#7FD6A0", "#8FA396", "#7FD6A0", "#BEE0CF", "#BC6A46"];
 
 export default function CallDemoModal({ callDemo }: { callDemo: CallDemo }) {
   const {

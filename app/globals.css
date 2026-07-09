@@ -50,6 +50,21 @@
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
+@keyframes nc-caret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+/* Incoming-signal rings that ripple outward from the live console. */
+@keyframes nc-ring {
+  0% { transform: scale(.3); opacity: .95; }
+  85% { opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
+}
+/* Gentle float for the console, as if held live on the line. */
+@keyframes nc-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
 
 html {
   scroll-behavior: smooth;
@@ -93,4 +108,55 @@ body {
 .reveal-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Evergreen "chapter": brand base with a soft radial depth, so full-bleed
+   dark sections read as lit rooms rather than flat blocks. */
+.nc-chapter {
+  background-color: var(--color-brand);
+  background-image:
+    radial-gradient(120% 80% at 15% 0%, rgba(127, 214, 160, .10), transparent 55%),
+    radial-gradient(90% 70% at 100% 100%, rgba(188, 106, 70, .12), transparent 60%);
+}
+
+.nc-ring {
+  animation: nc-ring 4.6s cubic-bezier(.2, .6, .3, 1) infinite;
+}
+.nc-float {
+  animation: nc-float 6s ease-in-out infinite;
+}
+
+/* Hairline that fades, for editorial column rules. */
+.nc-rule {
+  background: linear-gradient(to right, rgba(20, 57, 43, .18), rgba(20, 57, 43, 0));
+}
+
+/* Fine paper grain, fixed over the page so it never repaints on scroll. */
+.nc-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: .5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+/* Respect reduced-motion for every perpetual animation on the page. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .eq-bar,
+  .pulse-dot,
+  .pulse-dot-fast,
+  .fade-in,
+  .nc-ring,
+  .nc-float,
+  [class*="animate-[nc-caret"] {
+    animation: none !important;
+  }
+  .reveal-init {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

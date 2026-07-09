@@ -1,73 +1,45 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { motion, useReducedMotion, type Variants } from "motion/react";
+import type { ReactNode } from "react";
 
 /**
- * Scroll-reveal wrapper. Elements that start below ~86% of the viewport
- * height at mount fade/rise into view once they scroll into view;
- * above-the-fold content paints immediately with no transition.
+ * Scroll-reveal wrapper. Content springs up into view the first time it enters
+ * the viewport; reduced-motion renders it in place with no transition. Same API
+ * as before (children, className, as) so every section keeps working unchanged.
  */
+
+const EASE = [0.16, 1, 0.3, 1] as const;
+
+const variants: Variants = {
+  hidden: { opacity: 0, y: 26 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
+};
+
 export default function Reveal({
   children,
   className,
-  as: Tag = "div",
+  as = "div",
 }: {
   children: ReactNode;
   className?: string;
   as?: "div" | "span";
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [state, setState] = useState<"static" | "hidden" | "visible">("static");
+  const reduce = useReducedMotion();
+  const Comp = as === "span" ? motion.span : motion.div;
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    let io: IntersectionObserver | undefined;
-    const raf1 = requestAnimationFrame(() => {
-      const raf2 = requestAnimationFrame(() => {
-        const vh = window.innerHeight || 800;
-        if (el.getBoundingClientRect().top <= vh * 0.86) {
-          return; // above the fold: stays "static", no animation
-        }
-        if (typeof IntersectionObserver === "undefined") {
-          setState("visible");
-          return;
-        }
-        setState("hidden");
-        io = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                setState("visible");
-                io?.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.12, rootMargin: "0px 0px -7% 0px" }
-        );
-        io.observe(el);
-      });
-      return () => cancelAnimationFrame(raf2);
-    });
-
-    return () => {
-      cancelAnimationFrame(raf1);
-      io?.disconnect();
-    };
-  }, []);
-
-  const Comp = Tag as "div";
+  if (reduce) {
+    const Static = as === "span" ? "span" : "div";
+    return <Static className={className}>{children}</Static>;
+  }
 
   return (
     <Comp
-      ref={ref}
-      className={[
-        className,
-        state === "hidden" ? "reveal-init" : state === "visible" ? "reveal-visible" : "",
-      ]
-        .filter(Boolean)
-        .join(" ")}
+      className={className}
+      variants={variants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.18, margin: "0px 0px -7% 0px" }}
     >
       {children}
     </Comp>
