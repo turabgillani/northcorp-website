@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers static-assets deploy for the exported Next.js site.
+  // `npm run build` emits ./out (output: "export"); Workers serves it directly.
+  "name": "northcorp-website",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
