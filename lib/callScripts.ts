@@ -74,11 +74,11 @@ export const scripts: Record<ScenarioKey, CallScript> = {
     ],
   },
   chiropractic: {
-    practice: "Corona Spine & Wellness",
+    practice: "Laguna Spine & Wellness",
     audio: "/calls/chiropractic.mp3",
     total: 37.0,
     lines: [
-      { sp: "agent", at: 0.0, text: "Thanks for calling Corona Spine and Wellness. How can I help you today?" },
+      { sp: "agent", at: 0.0, text: "Thanks for calling Laguna Spine and Wellness. How can I help you today?" },
       { sp: "caller", at: 4.3, text: "I need to reschedule my adjustment this Monday." },
       { sp: "agent", at: 6.9, text: "No problem. It looks like you're calling from the number on the appointment, so I've pulled it up, Monday at 3:00 with Dr. Reyes." },
       { sp: "caller", at: 15.4, text: "That's the one." },
