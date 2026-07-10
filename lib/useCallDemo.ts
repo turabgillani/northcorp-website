@@ -66,16 +66,22 @@ export function useCallDemo() {
       stopClock();
       const script = scripts[key];
       if (script.audio && audioRef.current) {
-        setupAnalyser();
         const audio = audioRef.current;
+        if (!audio.src.endsWith(script.audio)) audio.src = script.audio;
+        setupAnalyser();
         audio.play()?.catch(() => {});
         const tick = () => {
           if (!audioRef.current) return;
           setElapsed(audioRef.current.currentTime);
           updateWave();
-          if (!audioRef.current.paused && !audioRef.current.ended) {
-            rafRef.current = requestAnimationFrame(tick);
+          if (audioRef.current.ended) {
+            setPlaying(false);
+            return;
           }
+          // Keep syncing until the audio ends. We do not bail on `paused`
+          // because play() is async and the element reads paused on the first
+          // frame; an explicit pause/close cancels this loop via stopClock().
+          rafRef.current = requestAnimationFrame(tick);
         };
         rafRef.current = requestAnimationFrame(tick);
         return;
@@ -101,7 +107,9 @@ export function useCallDemo() {
     setElapsed(0);
     setPlaying(true);
     setIsOpen(true);
-    run(scenario);
+    // Defer to the next frame so the <audio> element is mounted (and its ref
+    // set) before run() wires up the source and starts playback.
+    requestAnimationFrame(() => run(scenario));
   }, [stopClock, run, scenario]);
 
   const openWith = useCallback(
